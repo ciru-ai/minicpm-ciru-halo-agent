@@ -1,0 +1,34 @@
+{
+  "candidate": "minicpm-draft-head-q8-c8-wmma-packed-v1",
+  "library": "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/sampling-dense/draft-head-q8-c8-wmma-packed-v1/libminicpm_draft_head_q8_c8_wmma_packed_v1.so",
+  "library_sha256": "21a6de7c38a9b6dacebf1621c8150e39dfb3dccc38231b82564ca48b1e1d235a",
+  "source_sha256": "f5e457d61b1b389d1d6f737edec36df60a4174207d9a8429d28860a82d5b7b9b",
+  "header_sha256": {
+    "q8_dense_bf16_live.h": "67b7a89ad34c1eaed905e7c6e31a5514374ecaac405d47c3a73c71f626ea3da7",
+    "q8_dense_bf16.h": "728f4fd5276e01064fbc1bcd1eba417332bb2987e15b410d4ea73206af12b312"
+  },
+  "parent_source": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/experiments/q8-dense/code/q8_dense_bf16_live.hip",
+  "parent_source_sha256": "86ae6507eee70d4229b67f64e304d29ee523a09b337aef0659ce785b9828e1d6",
+  "symbol": "minicpm_draft_head_q8_c8_wmma_packed_v1_launch",
+  "resources": [
+    {
+      "name": "_ZN33minicpm_head_q8_c8_wmma_packed_v110projectionEPKtPKaS1_PtPjPKi",
+      "next_free_vgpr": 71,
+      "next_free_sgpr": 24,
+      "group_segment_fixed_size": 0,
+      "private_segment_fixed_size": 0,
+      "wavefront_size32": 1
+    }
+  ],
+  "admitted_shape": [
+    16,
+    248192,
+    2048
+  ],
+  "delta": "Same M16/N32 WMMA arithmetic as the row-major candidate; restore the original coalesced N16/G32 weight addressing after a one-time bit-preserving layout transform.",
+  "layout": "n16-g32-half-n-k16",
+  "additional_packed_weight_bytes": 540065792,
+  "target_bf16_head_unchanged": true,
+  "status": "CPU_COMPILED_GPU_UNTESTED",
+  "serving_promotion": false
+}

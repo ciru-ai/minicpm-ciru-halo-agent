@@ -1,0 +1,20 @@
+{
+  "ciru_q8/__init__.py": "f2dbc0a97b73f2b4492781b3763e7ba808da0d787cee6ec69928fb4e82bccb01",
+  "ciru_q8/attention_bridge.py": "4021c6f346849766ed4bc4ade8a7a621a2ac28db2a0594a7a56b259ce1ee3246",
+  "ciru_q8/attention_partition.py": "f6508e29735a1190636a3b74f38ffd9e6e1102f490341ec2a445fbde678e5cde",
+  "ciru_q8/config.py": "1dc43aa041c6449f4b23ac42f759f3ae6c7e1b73c33b0096f7cad5d8aba6f414",
+  "ciru_q8/method.py": "853d125f3357cd508cfbaca0bd0f57409678475e50844e73cb63d611ee2173c8",
+  "ciru_q8/mtp_prefix.py": "6d17592eb0a9c14453f81db7af46f426a5b964ceed5fee9af703207e67323f19",
+  "ciru_q8/mtp_worker.py": "6ec84fdb2ea1e71c38a4b928a928a5cee925a1d3039b859df65984fd9e332190",
+  "ciru_q8/worker.py": "df0dfedc52cd1e832973c42e2c7ce0972886e519f85efee21ccfd76159ddebe8",
+  "kernel-bindings.json": "1381d0ff9b14715e2f0a0d07927e1a427e9e400b9bba824eae7cf6d0c63692a5",
+  "upstream/vllm/vllm/model_executor/models/minicpmv.py": "575abadc9573613cbb4aefa1f1bde3156b5996d5b640bf25b9defa0fd2996642",
+  "upstream/vllm/vllm/model_executor/models/minicpmv4_6.py": "c25e46515a9e7a5d4a2bb58ad016554b81a96bb0706416d8f00537bda9f522dc",
+  "upstream/vllm/vllm/model_executor/models/minicpmv4_7.py": "07431a71632a92e38293314f361ae9c844bd43427357bfc6e01f6914fdebb4f4",
+  "ciru_q8/compact_prefill.py": "fc2befc5b0cd34329f824f4893e3bf2f5d358a6f94ab983d2e81eac2bfa319e5",
+  "ciru_q8/prefill_bridge.py": "3f10c60486c5769c27c6ecfc05f5655e08f83d8b3c9270db9199ffc2dd96623e",
+  "ciru_q8/dspark_attention_partition.py": "037bd4dc5817c28ebbda662a215658b2d3eea5f5ea5cdb7e9d9834467fdd02b7",
+  "ciru_q8/dspark_attention_bridge.py": "cdd9280bb75ab0fe2999e7ff043456dd89fa1457a9fd66c054c55a3c64fa6466",
+  "ciru_q8/dspark_worker.py": "bcf81b9a5134200e73454c44fc25b724b126b4acdce10574bda8b0c09a0b2edd",
+  "ciru_q8/dspark_kv_audit.py": "1222d1e4c41534bfdd9ef0c7f1fa8782421e484ddc4b749b7ce4e9c2ec4f1c1c"
+}

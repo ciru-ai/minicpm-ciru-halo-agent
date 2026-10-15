@@ -1,0 +1,53 @@
+{
+  "runtime_version": "upstream-ed7ae705-candidate1",
+  "modules": {
+    "vllm.model_executor.layers.mamba.gdn.qwen_gdn_linear_attn": {
+      "file": "qwen_gdn_linear_attn.py",
+      "native_path": "model_executor/layers/mamba/gdn/qwen_gdn_linear_attn.py",
+      "native_sha256": "3fbf257fef7f303b0082fdbedce4394df74b78ad9a594157079c89632b5c221e",
+      "sha256": "3fbf257fef7f303b0082fdbedce4394df74b78ad9a594157079c89632b5c221e"
+    },
+    "vllm.model_executor.layers.mamba.ops.causal_conv1d": {
+      "file": "causal_conv1d.py",
+      "native_path": "model_executor/layers/mamba/ops/causal_conv1d.py",
+      "native_sha256": "cb16cc9250c4195c09d6d83b43bba607c2d749b621d8d135a920443d1577265f",
+      "sha256": "e5b03321c3fb94240f915973a5008b62b7e765dfcf3a8d5805e2bbd6f1f6d5d8"
+    },
+    "vllm.v1.attention.backends.gdn_attn": {
+      "file": "gdn_attn.py",
+      "native_path": "v1/attention/backends/gdn_attn.py",
+      "native_sha256": "ce951db92bb58b5b655ff00a89d0ffc68f8fbfb936e1e2a72a5da543cdf9d2f4",
+      "sha256": "ce951db92bb58b5b655ff00a89d0ffc68f8fbfb936e1e2a72a5da543cdf9d2f4"
+    },
+    "vllm.v1.worker.gpu_model_runner": {
+      "file": "gpu_model_runner.py",
+      "native_path": "v1/worker/gpu_model_runner.py",
+      "native_sha256": "ab30d950cd0a06e8f8f4c77126e95d9b0fe75335e7cb7e342652a1c85a24b757",
+      "sha256": "ab30d950cd0a06e8f8f4c77126e95d9b0fe75335e7cb7e342652a1c85a24b757"
+    },
+    "vllm.entrypoints.openai.chat_completion.serving": {
+      "file": "chat_completion_serving_r03.py",
+      "native_path": "entrypoints/openai/chat_completion/serving.py",
+      "native_sha256": "692ea27120657f132e9db98299fbde844619e2bf8d006a7a946078dba3e42dd6",
+      "sha256": "ed2a2b5190eadf20b8a0e155b817cb14905e2262af916ee13c2745b868cde281"
+    },
+    "vllm.v1.spec_decode.dflash": {
+      "file": "dflash.py",
+      "native_path": "v1/spec_decode/dflash.py",
+      "native_sha256": "758318d6058caefbd3dbe91feddfba88006f872309f7c3275c6cc412d8c5733f",
+      "sha256": "253f343353853dbe9b0e1a3cf6d2c2271b6a8dc0d5c25e2dd461e0ccd1e99314"
+    },
+    "vllm.model_executor.models.qwen3_dflash2": {
+      "file": "qwen3_dflash2.py",
+      "native_path": "model_executor/models/qwen3_dflash2.py",
+      "native_sha256": "11ac6ba8c6db702375970e68cd042b98783a5c43b87f9bfa27e88463316bf499",
+      "sha256": "c141daa4b2059c0098224ac36471c2197b7052c100bef0a4dbc2ca79b627053f"
+    }
+  },
+  "upstream": [
+    "https://github.com/vllm-project/vllm/pull/52905",
+    "https://github.com/vllm-project/vllm/pull/55504"
+  ],
+  "local_extension": "Retained convolution arithmetic and API progress semantics; upstream speculative state routing. Retained fork DFlash2 sampler/anchor/embeddings and original draft-model arithmetic.",
+  "upstream_commit": "ed7ae705a1f366c2008964af562a7543e91d934e"
+}

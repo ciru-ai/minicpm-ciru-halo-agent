@@ -1,0 +1,5 @@
+{
+  "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/conv-release/conv_grid_worker.py": "9821c541e983c6a590e72ac1c520c33fd3e3ffad74c3e86ab7e5a0bab2df74ef",
+  "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/conv-release/conv_grid_swap.py": "ba815e3d1a524a3c3b9d9e257871e2537f0bd05c2f4573c8763dcc8119161a21",
+  "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/integration/upstream-engine-ed7ae705/plugin-site/ornith_g256/_vllm_correctness/causal_conv1d.py": "e5b03321c3fb94240f915973a5008b62b7e765dfcf3a8d5805e2bbd6f1f6d5d8"
+}

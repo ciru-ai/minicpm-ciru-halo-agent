@@ -1,0 +1,21 @@
+MiniCPM 4.7 Ultra — CIRU HALO AGENT
+Copyright 2026 Ciru
+
+Ciru-authored release code is provided under Apache License 2.0.
+
+Target weights originate from OpenBMB MiniCPM-V-4.7-35B-A3B,
+revision 4c7623a9326e0f74313bbc7292d852a9e3018a70 (Apache-2.0).
+DSpark weights originate from OpenBMB MiniCPM-V-4.7-35B-A3B-DSpark
+(Apache-2.0); the packaged checkpoint is preserved byte-for-byte.
+
+Third-party software retains its original license and notices. These include
+vLLM and AMD AITER (Apache-2.0), Triton (MIT), PyTorch (BSD-style), CPython
+(PSF), and ROCm components under their respective distributed licenses.
+The runtime distributions include their package license files.
+
+The BF16 prefill attention adaptation credits asf0 and
+halo-box/strix-llama.cpp pull request 172. The corresponding upstream MIT
+license and attribution are preserved with the kernel source.
+
+OpenBMB and AMD names and marks identify the model foundation and hardware;
+this is an independent Ciru release.

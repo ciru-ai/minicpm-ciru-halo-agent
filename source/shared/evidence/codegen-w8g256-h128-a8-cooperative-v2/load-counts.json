@@ -1,0 +1,51 @@
+[
+  {
+    "assembly": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-v2/libw8g256_h128_a8_cooperative-101.s",
+    "kernels": [
+      {
+        "name": "_ZN32ultra_w8g256_h128_a8_cooperative10projectionILb1EEEvPKaPKtS2_S4_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+        "static_global_load_counts": {
+          "global_load_b96": 1,
+          "global_load_b32": 2,
+          "global_load_b128": 12,
+          "global_load_d16_b16": 1,
+          "global_load_d16_hi_b16": 1
+        },
+        "wmma": {
+          "v_wmma_i32_16x16x16_iu8": 16
+        },
+        "lane_exchange": {
+          "ds_bpermute_b32": 8
+        },
+        "lds_memory": {
+          "ds_store_2addr_b32": 24,
+          "ds_load_2addr_b32": 32,
+          "ds_load_2addr_stride64_b32": 32
+        },
+        "barriers": 8
+      },
+      {
+        "name": "_ZN32ultra_w8g256_h128_a8_cooperative10projectionILb0EEEvPKaPKtS2_S4_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+        "static_global_load_counts": {
+          "global_load_b96": 1,
+          "global_load_b32": 2,
+          "global_load_b128": 12,
+          "global_load_d16_b16": 1,
+          "global_load_d16_hi_b16": 1
+        },
+        "wmma": {
+          "v_wmma_i32_16x16x16_iu8": 16
+        },
+        "lane_exchange": {
+          "ds_bpermute_b32": 8
+        },
+        "lds_memory": {
+          "ds_store_2addr_b32": 24,
+          "ds_load_2addr_b32": 32,
+          "ds_load_2addr_stride64_b32": 32
+        },
+        "barriers": 8
+      }
+    ]
+  }
+]

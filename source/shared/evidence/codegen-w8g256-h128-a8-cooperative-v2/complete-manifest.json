@@ -1,0 +1,172 @@
+{
+  "stage": "CPU compilation only; no GPU execution",
+  "utc": "2026-10-07T11:30:43.504973+00:00",
+  "build_script_sha256": "1f329522ad19116c17c0fb9529c9db99a9b3ed2983e0fb96e46b2e2793dbdc22",
+  "parent_manifest_sha256": "d71be2fee73827a1f177ade3c09e900547a9a8cf76be95db0022fe7d20170066",
+  "parent_candidate": "Exact H128/W8-G256/A8-G256 v1; cooperative M16/N64/K64 operand loading only",
+  "entry_symbols": [
+    "ornith_w8g256_h128_a8_cooperative_launch"
+  ],
+  "layout_symbol": "ornith_w8g256_h128_a8_cooperative_get_layout",
+  "route_tile_rows": 16,
+  "quant_layout_symbol": "ornith_w8g256_h128_a8_cooperative_get_quant_layout",
+  "abi": "retained complete-operation pointer/size/shape ordering; distinct symbols",
+  "arithmetic": {
+    "transform": "ascending H128 FP32, normalized0x3db504f3",
+    "activation": "parent A8 G256, FP16 scale, floor2^-14",
+    "weight": "distinct original-BF16 W8 G256, FP16 scale including subnormals",
+    "projection": "16 ordered signed IU8 K16 WMMA/G256;5KiB shared operands;unchanged sa*float(dot),sw*scaled,ascending groups"
+  },
+  "environment": {
+    "TMPDIR": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/tmp",
+    "LD_LIBRARY_PATH": "/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+    "HIP_VISIBLE_DEVICES": "",
+    "ROCR_VISIBLE_DEVICES": ""
+  },
+  "compilers": {
+    "10": {
+      "path": "/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++",
+      "resolved": "/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++",
+      "sha256": "f80bad7383249331b12bd9bfdfdfe821a9d362393d08e9489d5976681e9e4616",
+      "version": "AMD clang version 23.0.0git (https://github.com/ROCm/llvm-project.git 8f497e0992fb7513f7f78a6f6b6f1056c375e961)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin\n"
+    },
+    "101": {
+      "path": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++",
+      "resolved": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++",
+      "sha256": "f80bad7383249331b12bd9bfdfdfe821a9d362393d08e9489d5976681e9e4616",
+      "version": "AMD clang version 24.0.0git (https://github.com/ROCm/llvm-project.git d6f6cb691863e9258034ab48c1dfce21689d5606)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin\nConfiguration file: /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++.cfg\n"
+    }
+  },
+  "libraries": [
+    {
+      "path": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-v2/libw8g256_h128_a8_cooperative-101.so",
+      "bytes": 89032,
+      "sha256": "3f248bd42e3b1daf583d11147cf7ec1ec8bf4583c62b9cac73fe0796aadb5dc4",
+      "entry_symbol": "ornith_w8g256_h128_a8_cooperative_launch",
+      "resources": [
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative9histogramEPKiPiPjii",
+          "next_free_vgpr": 3,
+          "next_free_sgpr": 10,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative4scanEPKiPiS2_i",
+          "next_free_vgpr": 3,
+          "next_free_sgpr": 10,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative7scatterEPKiS1_PiS2_ii",
+          "next_free_vgpr": 6,
+          "next_free_sgpr": 10,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative9partitionEPKiS1_PNS_10DescriptorEPji",
+          "next_free_vgpr": 4,
+          "next_free_sgpr": 20,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative8quantizeEPKfPaPtPj",
+          "next_free_vgpr": 23,
+          "next_free_sgpr": 12,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative13middle_kernelEPKfS1_PfPKiPjmii",
+          "next_free_vgpr": 12,
+          "next_free_sgpr": 25,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative12reduce_slotsEPKfS1_PKiPfPtPjmiii",
+          "next_free_vgpr": 13,
+          "next_free_sgpr": 28,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative9transformILb1EEEvPKvPfPKiPjiii",
+          "next_free_vgpr": 6,
+          "next_free_sgpr": 26,
+          "group_segment_fixed_size": 1024,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative10projectionILb1EEEvPKaPKtS2_S4_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+          "next_free_vgpr": 107,
+          "next_free_sgpr": 43,
+          "group_segment_fixed_size": 5120,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative9transformILb0EEEvPKvPfPKiPjiii",
+          "next_free_vgpr": 6,
+          "next_free_sgpr": 8,
+          "group_segment_fixed_size": 1024,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN32ultra_w8g256_h128_a8_cooperative10projectionILb0EEEvPKaPKtS2_S4_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+          "next_free_vgpr": 107,
+          "next_free_sgpr": 40,
+          "group_segment_fixed_size": 5120,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        }
+      ],
+      "shared_command_file": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-v2/libw8g256_h128_a8_cooperative-101.command",
+      "assembly_command_file": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-v2/libw8g256_h128_a8_cooperative-101.assembly.command"
+    }
+  ],
+  "sources": {
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-v2/q8_complete.h": {
+      "sha256": "fbd4a004b34d97d00c552c5883bdd4db95d4e1dbd9841062f6e9d7f42a0fc959",
+      "bytes": 2897
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-v2/q8_complete_exp.h": {
+      "sha256": "61f800a91e002636007809c8d161131d9eb7ad8a037d33940e32f8f36b4d3e8a",
+      "bytes": 1108
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-v2/w8g256_h128_a8.h": {
+      "sha256": "1b32a72bde153d8a0ac0cbd5c69766070280777192f0ec26a00398dc165edf12",
+      "bytes": 3072
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-v2/w8g256_h128_a8_cooperative.h": {
+      "sha256": "993ac833a7d6fe3ea59ab5b720bc727a573055f5e2fb92933be1fee461659b8b",
+      "bytes": 1629
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-v2/w8g256_h128_a8_cooperative.hip": {
+      "sha256": "f0430c9cd4e5eebcae1c0adb3fbf06697d0b6b057da9ac699e5809b4d9a0e65a",
+      "bytes": 19723
+    }
+  },
+  "commands": {
+    "libw8g256_h128_a8_cooperative-101.command": {
+      "text": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++ -mno-wavefrontsize64 -x hip -std=c++20 -O2 -ffp-contract=off -fhip-fp32-correctly-rounded-divide-sqrt -fPIC --offload-arch=gfx1151 --rocm-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core --hip-path=/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel --rocm-device-lib-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/amdgcn/bitcode -gline-tables-only --gcc-toolchain=/nix/store/sanx9fg8mry8mq92zhlm5qvb83qlxrlx-gcc-15.2.0 -idirafter /nix/store/fbbw928argckfii0j322346ihmllg7a7-glibc-2.42-61-dev/include -B/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -L/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -shared /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-v2/w8g256_h128_a8_cooperative.hip -L /opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib -lamdhip64 -Wl,-rpath,/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib -o /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-v2/libw8g256_h128_a8_cooperative-101.so",
+      "sha256": "a9ccd168961c9b1499fe1ef184deb2add987d987bd4e2740e819c44415e575b5"
+    },
+    "libw8g256_h128_a8_cooperative-101.assembly.command": {
+      "text": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++ -mno-wavefrontsize64 -x hip -std=c++20 -O2 -ffp-contract=off -fhip-fp32-correctly-rounded-divide-sqrt -fPIC --offload-arch=gfx1151 --rocm-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core --hip-path=/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel --rocm-device-lib-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/amdgcn/bitcode -gline-tables-only --gcc-toolchain=/nix/store/sanx9fg8mry8mq92zhlm5qvb83qlxrlx-gcc-15.2.0 -idirafter /nix/store/fbbw928argckfii0j322346ihmllg7a7-glibc-2.42-61-dev/include -B/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -L/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib --cuda-device-only -S /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-v2/w8g256_h128_a8_cooperative.hip -o /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-v2/libw8g256_h128_a8_cooperative-101.s",
+      "sha256": "689282eee12e1ce465c92ff64b96d55d7761197585d21c9183209d9e145df53a"
+    }
+  }
+}

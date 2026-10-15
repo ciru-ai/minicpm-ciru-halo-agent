@@ -1,0 +1,210 @@
+{
+  "stage": "CPU compilation only; no GPU execution",
+  "utc": "2026-10-12T04:27:59.073294+00:00",
+  "build_script_sha256": "5bc60f1a13cbb79a65eebe2db2297c89ad219dca19b8a47f46d032b4afc7ae5c",
+  "parent_manifest_sha256": "37a3b5cf5e296de822282923a363cc0db618f0a191021ee4be72baf3916d7e24",
+  "parent_candidate": "Retained M64 compact/reduce4; only GU/down finite-flag epilogues change. Same matrix arithmetic, portableSiLU, banks, geometry, staging and arena.",
+  "unused_workspace_fields": [
+    "gate",
+    "up"
+  ],
+  "compare_quantized_activations": true,
+  "workspace_layout_changed": false,
+  "verify_grouping": true,
+  "small_route_grouping": false,
+  "consumer_part_unroll": 4,
+  "gu_stage": 256,
+  "route_dot4": false,
+  "route_dot4_max_rows": null,
+  "entry_symbols": [
+    "ornith_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output_launch"
+  ],
+  "layout_symbol": "ornith_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output_get_layout",
+  "route_tile_rows": 64,
+  "quant_layout_symbol": "ornith_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output_get_quant_layout",
+  "abi": "retained complete-operation pointer/size/shape ordering; distinct symbols",
+  "arithmetic": {
+    "transform": "ascending H128 FP32, normalized0x3db504f3",
+    "activation": "parent A8 G256, FP16 scale, floor2^-14",
+    "weight": "distinct original-BF16 W8 G256, FP16 scale including subnormals",
+    "projection": "16 ordered signed IU8 K16 WMMA/G256;5KiB shared operands;unchanged sa*float(dot),sw*scaled,ascending groups"
+  },
+  "environment": {
+    "TMPDIR": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/tmp",
+    "LD_LIBRARY_PATH": "/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+    "HIP_VISIBLE_DEVICES": "",
+    "ROCR_VISIBLE_DEVICES": ""
+  },
+  "compilers": {
+    "10": {
+      "path": "/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++",
+      "resolved": "/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin/clang++",
+      "sha256": "f80bad7383249331b12bd9bfdfdfe821a9d362393d08e9489d5976681e9e4616",
+      "version": "AMD clang version 23.0.0git (https://github.com/ROCm/llvm-project.git 8f497e0992fb7513f7f78a6f6b6f1056c375e961)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib/llvm/bin\n"
+    },
+    "101": {
+      "path": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++",
+      "resolved": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++",
+      "sha256": "f80bad7383249331b12bd9bfdfdfe821a9d362393d08e9489d5976681e9e4616",
+      "version": "AMD clang version 24.0.0git (https://github.com/ROCm/llvm-project.git d6f6cb691863e9258034ab48c1dfce21689d5606)\nTarget: x86_64-unknown-linux-gnu\nThread model: posix\nInstalledDir: /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin\nConfiguration file: /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++.cfg\n"
+    }
+  },
+  "libraries": [
+    {
+      "path": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.so",
+      "bytes": 118408,
+      "sha256": "c45bd7460ec80865ff7ea58f8f7eab556afcbb1519cc2821c977785412d82b9e",
+      "entry_symbol": "ornith_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output_launch",
+      "resources": [
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output9histogramEPKiPiPjii",
+          "next_free_vgpr": 3,
+          "next_free_sgpr": 10,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output4scanEPKiPiS2_i",
+          "next_free_vgpr": 3,
+          "next_free_sgpr": 10,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output7scatterEPKiS1_PiS2_ii",
+          "next_free_vgpr": 6,
+          "next_free_sgpr": 10,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output9partitionEPKiS1_PNS_10DescriptorEPji",
+          "next_free_vgpr": 4,
+          "next_free_sgpr": 20,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output8quantizeEPKfPaPtPj",
+          "next_free_vgpr": 23,
+          "next_free_sgpr": 12,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output14gate_up_middleEPKaPKtS1_S3_S1_S3_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+          "next_free_vgpr": 169,
+          "next_free_sgpr": 54,
+          "group_segment_fixed_size": 49152,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output13middle_kernelEPKfS1_PfPKiPjmii",
+          "next_free_vgpr": 12,
+          "next_free_sgpr": 25,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output12reduce_slotsEPKfS1_PKiPfPtPjmiii",
+          "next_free_vgpr": 13,
+          "next_free_sgpr": 28,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output26reduce_slots_h2048_top8_v4EPKfS1_PKiPfPtPji",
+          "next_free_vgpr": 11,
+          "next_free_sgpr": 19,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output7prepareILb1EEEvPKvPaPtPKiPjiii",
+          "next_free_vgpr": 28,
+          "next_free_sgpr": 30,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output7prepareILb0EEEvPKvPaPtPKiPjiii",
+          "next_free_vgpr": 28,
+          "next_free_sgpr": 13,
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        },
+        {
+          "name": "_ZN91ultra_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output18projection_m64n128ILb0EEEvPKaPKtS2_S4_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+          "next_free_vgpr": 169,
+          "next_free_sgpr": 44,
+          "group_segment_fixed_size": 49152,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1
+        }
+      ],
+      "shared_command_file": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.command",
+      "assembly_command_file": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.assembly.command"
+    }
+  ],
+  "sources": {
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/q8_complete.h": {
+      "sha256": "fbd4a004b34d97d00c552c5883bdd4db95d4e1dbd9841062f6e9d7f42a0fc959",
+      "bytes": 2897
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/q8_complete_exp.h": {
+      "sha256": "61f800a91e002636007809c8d161131d9eb7ad8a037d33940e32f8f36b4d3e8a",
+      "bytes": 1108
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/w8g256_h128_a8.h": {
+      "sha256": "1b32a72bde153d8a0ac0cbd5c69766070280777192f0ec26a00398dc165edf12",
+      "bytes": 3072
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output.h": {
+      "sha256": "161fcff122bef1cae0f6aa9540fa71563c8fd589b1e301a478a8c80598e3a75b",
+      "bytes": 2318
+    },
+    "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output.hip": {
+      "sha256": "68982c0136cd5dd6d790749e1fed2bc5519e19f144e9c258abf8bbd2cc50b10b",
+      "bytes": 33313
+    }
+  },
+  "commands": {
+    "libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.command": {
+      "text": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++ -mno-wavefrontsize64 -x hip -std=c++20 -O2 -ffp-contract=off -fhip-fp32-correctly-rounded-divide-sqrt -fPIC --offload-arch=gfx1151 --rocm-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core --hip-path=/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel --rocm-device-lib-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/amdgcn/bitcode -gline-tables-only --gcc-toolchain=/nix/store/sanx9fg8mry8mq92zhlm5qvb83qlxrlx-gcc-15.2.0 -idirafter /nix/store/fbbw928argckfii0j322346ihmllg7a7-glibc-2.42-61-dev/include -B/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -L/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -shared /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output.hip -L /opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib -lamdhip64 -Wl,-rpath,/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib -o /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.so",
+      "sha256": "895479638ee1844d8f80a7a99e049ee34833f0c8a8cd6f9a226953a68c3a6467"
+    },
+    "libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.assembly.command": {
+      "text": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++ -mno-wavefrontsize64 -x hip -std=c++20 -O2 -ffp-contract=off -fhip-fp32-correctly-rounded-divide-sqrt -fPIC --offload-arch=gfx1151 --rocm-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core --hip-path=/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel --rocm-device-lib-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/amdgcn/bitcode -gline-tables-only --gcc-toolchain=/nix/store/sanx9fg8mry8mq92zhlm5qvb83qlxrlx-gcc-15.2.0 -idirafter /nix/store/fbbw928argckfii0j322346ihmllg7a7-glibc-2.42-61-dev/include -B/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -L/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib -L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib --cuda-device-only -S /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output.hip -o /srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.s",
+      "sha256": "00be111e1758961e06819eae0de5f1acb58838685dbf7069678c93a3be621d4a"
+    }
+  },
+  "source_parent": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-v1/complete-manifest.json",
+  "unused_quant_workspace_fields": [
+    "gate_transformed",
+    "down_transformed"
+  ],
+  "gu_tile": [
+    64,
+    64,
+    256
+  ],
+  "down_tile": [
+    64,
+    128,
+    256
+  ],
+  "workgroup_threads": 512,
+  "nominal_projection_lds_bytes": 49152,
+  "output_flag_semantics": "All scale8/output16/SiLU512 checks retained; locally OR bits once per job after valid stores. Host reads flags after kernel completion."
+}

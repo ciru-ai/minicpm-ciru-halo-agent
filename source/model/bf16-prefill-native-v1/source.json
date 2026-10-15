@@ -1,0 +1,6 @@
+{
+  "upstream": "/home/crown/Documents/ChatGPT/Ornith1.5agent/minicpm-dspark-20261012/pr172-lead-20261013/source/ggml/src/ggml-cuda/fattn-rdna35.cu",
+  "upstream_sha256": "aeff66c5330510d1aaec4adb0d4693cf86c5a7f33821b886d1bd17ab521f5a20",
+  "adapted_sha256": "b8f69ffa8df2f1b684ca872231e82454bc186fc22b433ae83c3f3f1bbf37c43e",
+  "scope": "Explicit LDS staging port; requires actual-operand correctness and speed qualification."
+}

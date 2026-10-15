@@ -1,0 +1,8 @@
+{
+  "upstream": "https://github.com/halo-box/strix-llama.cpp/pull/172",
+  "commit": "62e9d99c4854212986e62786ab5d3eb07d284fdc",
+  "author": "asf0",
+  "license_url": "https://raw.githubusercontent.com/halo-box/strix-llama.cpp/62e9d99c4854212986e62786ab5d3eb07d284fdc/LICENSE",
+  "license_sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+  "adaptation": "BF16 WMMA operands and probabilities; standard softmax; varlen causal attention; current runtime interface. Original explicit LDS staging retained."
+}

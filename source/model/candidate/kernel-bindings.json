@@ -1,0 +1,24 @@
+{
+  "libraries": {
+    "small": {
+      "path": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-dot4-m1-group1-sparse4-v1/libw8g256_h128_a8_cooperative_dot4_m1_group1_sparse4-101.so",
+      "bytes": 126328,
+      "sha256": "b6d9dafd084c265c5532cb43e2068c8fd90932ae821bf151572aae85d85e54c9",
+      "entry_symbol": "ornith_w8g256_h128_a8_cooperative_dot4_m1_group1_sparse4_launch"
+    },
+    "small_fallback": {
+      "path": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-v2/libw8g256_h128_a8_cooperative-101.so",
+      "bytes": 89032,
+      "sha256": "3f248bd42e3b1daf583d11147cf7ec1ec8bf4583c62b9cac73fe0796aadb5dc4",
+      "entry_symbol": "ornith_w8g256_h128_a8_cooperative_launch"
+    },
+    "prefill": {
+      "path": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/evidence/codegen-w8g256-h128-a8-cooperative-m64-fused-k256-u4-prep-wave-compact-reduce4-compact-output-v1/libw8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output-101.so",
+      "bytes": 118408,
+      "sha256": "c45bd7460ec80865ff7ea58f8f7eab556afcbb1519cc2821c977785412d82b9e",
+      "entry_symbol": "ornith_w8g256_h128_a8_cooperative_m64_fused_k256_u4_prep_wave_compact_reduce4_compact_output_launch"
+    }
+  },
+  "prefill_min_rows": 1120,
+  "small_layout_capacity": 2047
+}

@@ -1,0 +1,247 @@
+{
+  "unused_workspace_fields": [
+    "gate",
+    "up"
+  ],
+  "unused_quant_workspace_fields": [
+    "gate_transformed",
+    "down_transformed"
+  ],
+  "compare_quantized_activations": true,
+  "verify_grouping": true,
+  "route_tile_rows": 64,
+  "gu_tile": {
+    "M": 128,
+    "N": 64,
+    "K": 256,
+    "LDS": 65536
+  },
+  "final_grouping": "M64 after GU",
+  "stage": "COMPILED_UNQUALIFIED",
+  "parent_manifest": "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-v1/complete-manifest.json",
+  "parent_manifest_sha256": "4b01250e7cbbabffdce1a44ec3224b2d8dd3dce2fea5a922f1db7c83e5cdd968",
+  "layout_symbol": "ornith_w8g256_m128_gu64k_producer_v3_get_layout",
+  "quant_layout_symbol": "ornith_w8g256_m128_gu64k_producer_v3_get_quant_layout",
+  "libraries": [
+    {
+      "path": "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/libw8g256_m128_gu64k_producer_v3.so",
+      "sha256": "5ece1482fbed7b49473ec3cd25a0418fca1ba2445008bf8a0d5898cf57ae1961",
+      "entry_symbol": "ornith_w8g256_m128_gu64k_producer_v3_launch",
+      "resources": [
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v39histogramEPKiPiPjii",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 3,
+          "next_free_sgpr": 10
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v34scanEPKiPiS2_i",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 3,
+          "next_free_sgpr": 10
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v37scatterEPKiS1_PiS2_ii",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 6,
+          "next_free_sgpr": 10
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v39partitionEPKiS1_PNS_10DescriptorEPji",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 4,
+          "next_free_sgpr": 20
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v38quantizeEPKfPaPtPj",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 23,
+          "next_free_sgpr": 12
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v321partition_gate_hybridEPKiS1_PNS_10DescriptorEPji",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 4,
+          "next_free_sgpr": 22
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v323validate_grouped_routesEPKiPjS2_i",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 2,
+          "next_free_sgpr": 9
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v320gate_up_full_m128n64EPKaPKtS1_S3_S1_S3_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+          "group_segment_fixed_size": 65536,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 196,
+          "next_free_sgpr": 58
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v319gate_up_tail_m64n64EPKaPKtS1_S3_S1_S3_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+          "group_segment_fixed_size": 49152,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 169,
+          "next_free_sgpr": 56
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v313middle_kernelEPKfS1_PfPKiPjmii",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 12,
+          "next_free_sgpr": 25
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v312reduce_slotsEPKfS1_PKiPfPtPjmiii",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 13,
+          "next_free_sgpr": 28
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v326reduce_slots_h2048_top8_v4EPKfS1_PKiPfPtPji",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 11,
+          "next_free_sgpr": 19
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v37prepareILb1EEEvPKvPaPtPKiPjiii",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 28,
+          "next_free_sgpr": 30
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v37prepareILb0EEEvPKvPaPtPKiPjiii",
+          "group_segment_fixed_size": 0,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 28,
+          "next_free_sgpr": 13
+        },
+        {
+          "name": "_ZN35ultra_w8g256_m128_gu64k_producer_v318projection_m64n128ILb0EEEvPKaPKtS2_S4_PKNS_10DescriptorEPKiPKjPfPjiiiii",
+          "group_segment_fixed_size": 49152,
+          "private_segment_fixed_size": 0,
+          "wavefront_size32": 1,
+          "next_free_vgpr": 169,
+          "next_free_sgpr": 44
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/q8_complete.h": {
+      "sha256": "fbd4a004b34d97d00c552c5883bdd4db95d4e1dbd9841062f6e9d7f42a0fc959",
+      "bytes": 2897
+    },
+    "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/q8_complete_exp.h": {
+      "sha256": "61f800a91e002636007809c8d161131d9eb7ad8a037d33940e32f8f36b4d3e8a",
+      "bytes": 1108
+    },
+    "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/w8g256_h128_a8.h": {
+      "sha256": "1b32a72bde153d8a0ac0cbd5c69766070280777192f0ec26a00398dc165edf12",
+      "bytes": 3072
+    },
+    "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/w8g256_m128_gu64k_producer_v3.h": {
+      "sha256": "8eb5217eb3289b7aa53cb68441d22cdbf799cd058b87331b71761a2b9548c24c",
+      "bytes": 2094
+    },
+    "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/w8g256_m128_gu64k_producer_v3.hip": {
+      "sha256": "c8acd19b1c8b4c95434632a8c25d5e06b2c9d01209b228c6f09d8631f91db840",
+      "bytes": 45345
+    }
+  },
+  "commands": {
+    "library": [
+      "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++",
+      "-mno-wavefrontsize64",
+      "-x",
+      "hip",
+      "-std=c++20",
+      "-O2",
+      "-ffp-contract=off",
+      "-fhip-fp32-correctly-rounded-divide-sqrt",
+      "-fPIC",
+      "--offload-arch=gfx1151",
+      "--rocm-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core",
+      "--hip-path=/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel",
+      "--rocm-device-lib-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/amdgcn/bitcode",
+      "-gline-tables-only",
+      "--gcc-toolchain=/nix/store/sanx9fg8mry8mq92zhlm5qvb83qlxrlx-gcc-15.2.0",
+      "-idirafter",
+      "/nix/store/fbbw928argckfii0j322346ihmllg7a7-glibc-2.42-61-dev/include",
+      "-B/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib",
+      "-L/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib",
+      "-B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "-L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "-B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "-L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "-shared",
+      "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/w8g256_m128_gu64k_producer_v3.hip",
+      "-L",
+      "/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib",
+      "-lamdhip64",
+      "-Wl,-rpath,/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel/lib",
+      "-o",
+      "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/libw8g256_m128_gu64k_producer_v3.so"
+    ],
+    "assembly": [
+      "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/bin/clang++",
+      "-mno-wavefrontsize64",
+      "-x",
+      "hip",
+      "-std=c++20",
+      "-O2",
+      "-ffp-contract=off",
+      "-fhip-fp32-correctly-rounded-divide-sqrt",
+      "-fPIC",
+      "--offload-arch=gfx1151",
+      "--rocm-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core",
+      "--hip-path=/opt/ciru/glm53-iu4/venv/lib/python3.14/site-packages/_rocm_sdk_devel",
+      "--rocm-device-lib-path=/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/toolchains/rocm-core-10.1.0/sdk/_rocm_sdk_core/lib/llvm/amdgcn/bitcode",
+      "-gline-tables-only",
+      "--gcc-toolchain=/nix/store/sanx9fg8mry8mq92zhlm5qvb83qlxrlx-gcc-15.2.0",
+      "-idirafter",
+      "/nix/store/fbbw928argckfii0j322346ihmllg7a7-glibc-2.42-61-dev/include",
+      "-B/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib",
+      "-L/nix/store/fjkx1l5cnskzrqacf08z7i8z17256w0j-glibc-2.42-61/lib",
+      "-B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "-L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "-B/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "-L/nix/store/si4q3zks5mn5jhzzyri9hhd3cv789vlm-gcc-15.2.0-lib/lib",
+      "--cuda-device-only",
+      "-S",
+      "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/w8g256_m128_gu64k_producer_v3.hip",
+      "-o",
+      "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/candidates/gu64k-producer-v3/libw8g256_m128_gu64k_producer_v3.s"
+    ]
+  },
+  "authoring_source": {
+    "path": "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/build_gu64k_producer.py",
+    "sha256": "a1b2ef24d8129ed85586ab73b75712e85cb3e67810c7c33ebd42b31ada6aa8f1"
+  },
+  "scope": "One producer validation launch certifies all grouped route values before GU. Full tiles use unmasked body only if all validate; original descriptor guards and masked fallback retained.",
+  "full_optimizer_qualified": false
+}

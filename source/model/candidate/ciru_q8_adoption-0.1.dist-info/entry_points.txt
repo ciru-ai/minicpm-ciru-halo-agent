@@ -1,0 +1,2 @@
+[vllm.general_plugins]
+ciru_q8_adoption = ciru_q8:register

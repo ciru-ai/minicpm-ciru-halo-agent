@@ -1,0 +1,31 @@
+{
+  "candidate": "minicpm-draft-head-q8-c1-v1",
+  "library": "/srv/ssd/p3700ba/scratch/crown/minicpm-dspark-20261012/20261014-haloloom-native-adapter/sampling-dense/draft-head-q8-c1/libminicpm_draft_head_q8_v1.so",
+  "library_sha256": "9f916612045207c15296313c13f41e759274997eb34b7aa27e8f6c4a2c79c24a",
+  "source_sha256": "24a1455bf03e646f1939a07343c62006ed125caa6303abab1530989d4ef8d434",
+  "parent_source": "/srv/ssd/sn850x/scratch/crown/ornith-ultra-20261007/experiments/q8-dense/code/q8_dense_qkv_row_consistent_v3.hip",
+  "parent_source_sha256": "69199ec05a5e01ecb3c06f0b7543f1d196d894e4eea4df46ce64020088f4a320",
+  "header_sha256": "67b7a89ad34c1eaed905e7c6e31a5514374ecaac405d47c3a73c71f626ea3da7",
+  "base_header_sha256": "728f4fd5276e01064fbc1bcd1eba417332bb2987e15b410d4ea73206af12b312",
+  "symbol": "minicpm_draft_head_q8_v1_launch",
+  "row_tile": 4,
+  "resources": [
+    {
+      "name": "_ZN18minicpm_head_q8_v110projectionILi248192EEEvPKtPKaS2_PtPjPKii",
+      "next_free_vgpr": 106,
+      "next_free_sgpr": 29,
+      "group_segment_fixed_size": 0,
+      "private_segment_fixed_size": 0,
+      "wavefront_size32": 1
+    }
+  ],
+  "admitted_shape": [
+    3,
+    248192,
+    2048
+  ],
+  "delta": "Reuse Ornith per32 Q8 weight to BF16 DOT2 arithmetic; specialize vocabulary N and admit only M3 draft head. No activation quantization.",
+  "resident_contract": "Separate draft-only packed copy; shared target BF16 head remains unchanged. Adds packed resident bytes.",
+  "status": "CPU_COMPILED_GPU_UNTESTED",
+  "serving_promotion": false
+}
